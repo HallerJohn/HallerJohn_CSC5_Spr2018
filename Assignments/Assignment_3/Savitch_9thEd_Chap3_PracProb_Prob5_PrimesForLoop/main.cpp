@@ -25,7 +25,7 @@ int main(int argc, char** argv) {
    srand(static_cast<unsigned int>(time(0)));
     
     //Declare Variables
-    int nLoops=100;
+    int nLoops=100000;
     bool prime;     //determine if num2Tst is prime
     
     //Initialize Variables
@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
     //Calculate the answer
     for(int num2Tst=2;num2Tst<=nLoops;num2Tst++){
         prime=true;
-        for(int i=2;i<=sqrt(nLoops);i++){
+        for(int i=2;i<=sqrt(nLoops)&&prime;i++){
             prime=num2Tst==i?true&&prime:prime&&num2Tst%i;
         }
                   //Output data
