@@ -25,7 +25,7 @@ int main(int argc, char** argv) {
    srand(static_cast<unsigned int>(time(0)));
     
     //Declare Variables
-    int nLoops=100000;
+    int nLoops=10000000;
     bool prime;     //determine if num2Tst is prime
     
     //Initialize Variables
@@ -37,7 +37,7 @@ int main(int argc, char** argv) {
             prime=num2Tst==i?true&&prime:prime&&num2Tst%i;
         }
                   //Output data
-        cout<<static_cast<int>(num2Tst)
+        if(prime)cout<<static_cast<int>(num2Tst)
             <<" is "
             <<(prime?"Prime":"Not Prime")
             <<endl;
