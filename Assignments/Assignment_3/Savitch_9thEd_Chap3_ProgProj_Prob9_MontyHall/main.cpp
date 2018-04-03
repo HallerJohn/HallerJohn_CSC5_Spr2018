@@ -25,10 +25,10 @@ int main(int argc, char** argv) {
     //Seed random number generator
 srand(static_cast<unsigned int>(time(0)));
     //Declare Variables
-float games,
-        stayWin,        //times won when keeping door
-        moveWin,        //times won when switched door
-        drChose,        //first door chosen
+unsigned int games;     //number of times played
+float   stayWin,      //times won when keeping door
+        moveWin;        //times won when switched door
+int     drChose,     //first door chosen
         drWin,          //winning door
         drRev,          //door which was revealed
         drRem,          //remaining door
