@@ -40,15 +40,15 @@ int main(int argc, char** argv) {
     //11111122222222333333334444444455555555666666667777777788888888999999990000                                        
     // Deal cards
     do{                                 //Loop to generate cards and their suit
-        plCard1=rand()%12+2;            //Player's first card
-        plCard2=rand()%12+2;            //Player's second card
-        plCard3=rand()%12+2;            //Player's third card
+        plCard1=rand()%13+2;            //Player's first card
+        plCard2=rand()%13+2;            //Player's second card
+        plCard3=rand()%13+2;            //Player's third card
         plSuit1=rand()%4;               //Player's first suit
         plSuit2=rand()%4;               //Player's second suit
         plSuit3=rand()%4;               //Player's third suit
-        cpCard1=rand()%12+2;            //Computer's first card
-        cpCard2=rand()%12+2;            //Computer's second card
-        cpCard3=rand()%12+2;            //Computer's third card
+        cpCard1=rand()%13+2;            //Computer's first card
+        cpCard2=rand()%13+2;            //Computer's second card
+        cpCard3=rand()%13+2;            //Computer's third card
         cpSuit1=rand()%4;               //Computer's first suit
         cpSuit2=rand()%4;               //Computer's second suit
         cpSuit3=rand()%4;               //Computer's third suit
@@ -197,40 +197,40 @@ int main(int argc, char** argv) {
         }
     }
     
-    cout<<"Your final score is "<<plScore<<endl;
-    if(plScore>21){
+    cout<<"Your final score is "<<plScore<<endl;   //output final score
+    if(plScore>21){                             //determine if busted or not
         cout<<"You busted, you lose."<<endl;
-        return 0;
+        return 0;       //someone busted so end game
     }
     //11111122222222333333334444444455555555666666667777777788888888999999990000
     //Determine Computer Score
-    if (cpCard1>=2&&cpCard1<=9){
+    if (cpCard1>=2&&cpCard1<=9){        //if first card is between 1-9
         cpScore+=cpCard1;
-    }else if(cpCard1>=10&&cpCard1<=13){
+    }else if(cpCard1>=10&&cpCard1<=13){ //if first card is a face card
         cpScore+=10;
-    }else if(cpCard1==14){
+    }else if(cpCard1==14){              //if first card is an ace
         ((cpScore>10)?cpScore+=1:cpScore+=11);        
     }
-    if (cpCard2>=2&&cpCard2<=9){
+    if (cpCard2>=2&&cpCard2<=9){        //if second card is between 1-9
         cpScore+=cpCard2;
-    }else if(cpCard2>=10&&cpCard2<=13){
+    }else if(cpCard2>=10&&cpCard2<=13){ //if second card is a face card
         cpScore+=10;
-    }else if(cpCard2==14){
+    }else if(cpCard2==14){              //if second card is an ace
         ((cpScore>10)?cpScore+=1:cpScore+=11);        
     }
-    if(cpScore<17){
-        if (cpCard3 >= 2 && cpCard3 <= 9) {
+    if(cpScore<17){  //used to determine if dealer will hit or keep
+        if (cpCard3 >= 2 && cpCard3 <= 9) {             //if third card is 1-9
             cpScore += cpCard3;
-        } else if (cpCard3 >= 10 && cpCard3 <= 13) {
+        } else if (cpCard3 >= 10 && cpCard3 <= 13) {    //if third card is face  
             cpScore += 10;
-        } else if (cpCard3 == 14) {
+        } else if (cpCard3 == 14) {                     //if third card is ace
             ((cpScore > 10) ? cpScore += 1 : cpScore += 11);
         }
     }
-    cout<<"The Dealer's final score is "<<cpScore<<endl;
-    if(cpScore>21){
+    cout<<"The Dealer's final score is "<<cpScore<<endl;//output final score
+    if(cpScore>21){                                 //determine if dealer busted
         cout<<"The Dealer busted, you Win"<<endl;
-        return 0;
+        return 0;   //someone busted so end game
     }
     //11111122222222333333334444444455555555666666667777777788888888999999990000
     //Determine winner
