@@ -39,7 +39,6 @@ int main(int argc, char** argv) {
     day=cnvDay(sDay);
     month=cnvMnth(sMonth);
     
-    
     //Output data
     cout<<"The date is "<<static_cast<int>(month)<<"/"<<static_cast<int>(day)<<"/"<<year<<endl;
     cout<<"The day of the week = "<<dyOfWek(month,day,year)<<endl;
@@ -47,7 +46,7 @@ int main(int argc, char** argv) {
     return 0;
 }
 string dyOfWek(char month,char day,unsigned int year){
-    int weekDay=(month+gtMnVal(month,year)+gtYrVal(year)+gtCntVl(year));
+    int weekDay=(day+gtMnVal(month,year)+gtYrVal(year)+gtCntVl(year));
     weekDay%=7;
     switch(weekDay){
         case 0:return "Sunday";
