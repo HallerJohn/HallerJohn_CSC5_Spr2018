@@ -48,6 +48,7 @@ int main(int argc, char** argv) {
         prntDck(hand,HNDSZ,HNDSZ);
     }
     prntDck(deck,DCKSIZE,13);
+    
     //Process/Calculations Here
     
     //Output Located Here
