@@ -18,7 +18,7 @@
 struct Array2D{
     int **data;//pointer to the dynamic array
     int row;//number of rows
-    int cols;//number of columns
+    int col;//number of columns
 };
 
 
