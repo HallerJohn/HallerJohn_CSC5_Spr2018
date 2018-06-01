@@ -15,7 +15,7 @@ using namespace std;
 //Math, Physics, Science, Conversions, 2-D Array Columns
 
 //Function Prototypes 
-bool countNum2s();
+void countNum2s();
 
 //Program Execution Begins Here
 
@@ -32,7 +32,7 @@ int main(int argc, char** argv) {
     
     return 0;
 }
-bool countNum2s(){
+void countNum2s(){
     //Declare all Variables, no doubles
     int size,count2;
     int array[size];
