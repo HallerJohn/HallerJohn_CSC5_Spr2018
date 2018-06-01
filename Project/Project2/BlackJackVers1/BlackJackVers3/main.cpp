@@ -2,7 +2,7 @@
  * File:   CPPTemplate.cpp
  * Author: john Haller
  * Created on May 20, 2018, 9:30 PM
- * Purpose:  CPP Template
+ * Purpose:  Black Jack
  */
 
 //System Libraries Here
