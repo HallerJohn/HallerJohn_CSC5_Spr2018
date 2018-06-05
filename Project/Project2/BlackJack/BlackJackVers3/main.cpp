@@ -27,14 +27,14 @@ char faceVal(char);//used to find the val of the card number
 void prtDeck(char [],char);//used to print deck in testing
 void shuffle(char [],char);//used to shuffle deck
 void deal(char [],char,vector < char > &);//used to deal deck
-void prntHnd(vector < char >);
-void score(vector < char >, int &,int &, int &);
-void winner(bool,bool,int,int,char [][players],int);
-void pause(int);
-void pause(int,int);
-bool bust(int,int bust=21);
-void display(char [][players],int);
-void markBub(char [],char);
+void prntHnd(vector < char >);//used to print hands
+void score(vector < char >, int &,int &, int &);//used to score cards
+void winner(bool,bool,int,int,char [][players],int);//used to determine winner
+void pause(int);//used to pause
+void pause(int,int);//overloaded pause
+bool bust(int,int bust=21);//used to determine if bust or not
+void display(char [][players],int);//used to display scoreboard
+void markBub(char [],char);//mark sort
 
 //Program Execution Begins Here
 
